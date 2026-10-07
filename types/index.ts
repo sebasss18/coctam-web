@@ -1,0 +1,56 @@
+export interface Enlace {
+  etiqueta: string;
+  href: string;
+}
+
+export interface Convenio {
+  id: string;
+  titulo: string;
+  archivo: string;
+  logo: string;
+  ajuste?: "contain" | "cover";
+}
+
+export interface Video {
+  titulo: string;
+  href: string;
+  logo: string;
+  creditos: { rol: string; nombre: string }[];
+}
+
+export interface Acceso {
+  titulo: string;
+  descripcion: string;
+  etiqueta: string;
+  href: string;
+  externo: boolean;
+}
+
+export type NombreIcono =
+  | "miembros"
+  | "sistema"
+  | "webmail"
+  | "asociados"
+  | "blog";
+
+export interface Acceso {
+  titulo: string;
+  descripcion: string;
+  etiqueta: string;
+  href: string;
+  externo: boolean;
+  icono: NombreIcono;
+}
+
+export interface SlideHero {
+  id: string;
+  etiqueta: string;
+  titulo: string;
+  descripcion: string;
+  fondo: string;
+  cta: {
+    etiqueta: string;
+    href: string;
+    externo: boolean;
+  };
+}
