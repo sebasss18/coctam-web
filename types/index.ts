@@ -68,3 +68,14 @@ export interface ItemColegio {
   descripcion: string;
   icono: NombreIconoColegio;
 }
+
+export interface Noticia {
+  slug: string;
+  fecha: string;
+  titulo: string;
+  descripcion?: string;
+  archivo?: string;
+  autor?: string;
+  color: "sky" | "slate";
+  contenido?: string[];
+}

@@ -4,7 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { slidesHero } from "@/data/hero";
 
-const INTERVALO = 6000;
+const INTERVALO = 5000;
 
 export default function HeroCarrusel() {
   const [indice, setIndice] = useState(0);
