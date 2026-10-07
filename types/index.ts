@@ -54,3 +54,17 @@ export interface SlideHero {
     externo: boolean;
   };
 }
+
+export type NombreIconoColegio =
+  | "superacion"
+  | "responsabilidad"
+  | "critica"
+  | "comunicacion"
+  | "vision"
+  | "mision";
+
+export interface ItemColegio {
+  titulo: string;
+  descripcion: string;
+  icono: NombreIconoColegio;
+}
