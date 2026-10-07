@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { navegacion } from "@/data/enlaces";
@@ -64,16 +65,38 @@ export default function Header() {
         }`}
       >
         <nav
-          className={`mx-auto flex max-w-6xl items-center justify-between px-4 transition-all duration-300 ${
-            scroll ? "h-14" : "h-16"
+          className={`mx-auto flex max-w-6xl items-center justify-between px-4 transition-all duration-500 ease-out ${
+            scroll ? "h-14" : "h-20"
           }`}
         >
           <Link
             href="/"
             onClick={cerrar}
-            className="flex items-center gap-2 text-lg font-bold tracking-widest"
+            className="flex items-center text-lg font-bold tracking-widest"
           >
-            <span className="h-2 w-2 rounded-full bg-sky-600" />
+            <span
+              className={`block shrink-0 overflow-hidden rounded-xl bg-white shadow-md transition-all duration-500 ease-out motion-reduce:transition-none ${
+                scroll
+                  ? "mr-0 h-0 w-0 scale-50 opacity-0"
+                  : "mr-3 h-12 w-12 scale-100 opacity-100"
+              }`}
+            >
+              <Image
+                src="/logos/coctam-logo.jpeg"
+                alt=""
+                width={96}
+                height={96}
+                priority
+                className="h-full w-full object-contain p-0.5"
+              />
+            </span>
+            <span
+              className={`block shrink-0 rounded-full bg-sky-600 transition-all duration-500 ease-out motion-reduce:transition-none ${
+                scroll
+                  ? "mr-2 h-2 w-2 scale-100 opacity-100"
+                  : "mr-0 h-0 w-0 scale-0 opacity-0"
+              }`}
+            />
             COCTAM
           </Link>
 
