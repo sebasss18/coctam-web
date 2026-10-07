@@ -9,6 +9,14 @@ export default function Header() {
   const ruta = usePathname();
   const [abierto, setAbierto] = useState(false);
   const [scroll, setScroll] = useState(false);
+  const [rutaPrevia, setRutaPrevia] = useState(ruta);
+
+  if (ruta !== rutaPrevia) {
+    setRutaPrevia(ruta);
+    setAbierto(false);
+  }
+
+  const cerrar = () => setAbierto(false);
 
   useEffect(() => {
     const alScroll = () => setScroll(window.scrollY > 8);
@@ -43,7 +51,7 @@ export default function Header() {
   return (
     <>
       <div
-        onClick={() => setAbierto(false)}
+        onClick={cerrar}
         aria-hidden="true"
         className={`fixed inset-0 z-40 bg-black/50 backdrop-blur-sm transition-opacity duration-300 md:hidden ${
           abierto ? "opacity-100" : "pointer-events-none opacity-0"
@@ -62,6 +70,7 @@ export default function Header() {
         >
           <Link
             href="/"
+            onClick={cerrar}
             className="flex items-center gap-2 text-lg font-bold tracking-widest"
           >
             <span className="h-2 w-2 rounded-full bg-sky-600" />
@@ -93,7 +102,7 @@ export default function Header() {
             aria-expanded={abierto}
             aria-controls="menu-movil"
             aria-label={abierto ? "Cerrar menú" : "Abrir menú"}
-            className="flex h-10 w-10 items-center justify-center rounded-lg transition-colors md:hidden cursor-pointer"
+            className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-lg transition-colors md:hidden"
           >
             <span className="relative block h-4 w-5">
               <span
@@ -141,6 +150,7 @@ export default function Header() {
                 >
                   <Link
                     href={item.href}
+                    onClick={cerrar}
                     aria-current={activo ? "page" : undefined}
                     className={`block px-1 py-3 text-base transition-colors duration-200 ${
                       activo ? "text-white" : "text-slate-400 hover:text-white"

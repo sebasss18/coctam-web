@@ -123,6 +123,48 @@ async function PaginaNoticiaContent({ params }: NoticiaProps) {
             )}
           </div>
         </article>
+      ) : noticia.archivo ? (
+        <section className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+          <div className="flex flex-col gap-5 border-b border-slate-200 px-5 py-5 sm:flex-row sm:items-center sm:justify-between sm:px-7">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-widest text-sky-700">
+                Documento adjunto · PDF
+              </p>
+              <h2 className="mt-2 text-xl font-bold text-slate-900">
+                Consulta el documento
+              </h2>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <a
+                href={noticia.archivo}
+                download
+                className="inline-flex items-center justify-center rounded-lg bg-sky-700 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-sky-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600"
+              >
+                Descargar PDF
+              </a>
+              <a
+                href={noticia.archivo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-lg border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-700 transition-colors hover:border-sky-700 hover:text-sky-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600"
+              >
+                Abrir en otra pestaña
+              </a>
+            </div>
+          </div>
+
+          <div className="bg-slate-100 p-2 sm:p-4">
+            <iframe
+              src={noticia.archivo}
+              title={`Vista previa del documento: ${noticia.titulo}`}
+              className="h-[75vh] min-h-[32rem] w-full rounded-lg border border-slate-200 bg-white"
+            />
+          </div>
+          <p className="px-5 py-4 text-sm text-slate-500 sm:px-7">
+            Si la vista previa no aparece en tu navegador, descarga el PDF o
+            ábrelo en otra pestaña.
+          </p>
+        </section>
       ) : (
         <section className="overflow-hidden rounded-2xl border border-sky-200 bg-sky-50 shadow-sm">
           <div className="flex flex-col items-center justify-center px-6 py-14 text-center sm:px-10 sm:py-16">

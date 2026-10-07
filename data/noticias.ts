@@ -7,7 +7,7 @@ export const noticias: Noticia[] = [
     titulo: "Comunicado",
     descripcion:
       "Comunicado de la COCTAM relacionado con el desarrollo y actividades de la entidad.",
-    archivo: "/Comunicado COCTAM mayo 2022.pdf",
+    archivo: "/documentos/Comunicado%20COCTAM%20mayo%202022.pdf",
     color: "sky",
   },
   {
@@ -16,7 +16,8 @@ export const noticias: Noticia[] = [
     titulo: "Preparados para ciertas emergencias",
     descripcion:
       "Primera parte del artículo de Fernando Barba M. sobre preparación para emergencias.",
-    archivo: "/primera parte articulo de Fernando Barba.pdf",
+    archivo:
+      "/documentos/primera%20parte%20articulo%20de%20Fernando%20Barba.pdf",
     autor: "CTA. Fernando Barba M. México DF.",
     color: "slate",
   },

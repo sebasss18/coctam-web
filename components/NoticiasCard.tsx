@@ -7,25 +7,6 @@ interface NoticiasCardProps {
   retraso?: number;
 }
 
-function IconoDocumento() {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-      className="h-8 w-8"
-    >
-      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z" />
-      <path d="M14 2v6h6" />
-      <path d="M8 13h8M8 17h5" />
-    </svg>
-  );
-}
-
 function IconoArrow() {
   return (
     <svg
@@ -52,20 +33,8 @@ export default function NoticiasCard({
     <Revelar retraso={retraso} className="h-full">
       <Link
         href={`/noticias/${noticia.slug}`}
-        className="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600"
+        className="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:scale-[1.01] hover:border-slate-300 hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600 motion-reduce:transition-none"
       >
-        <div
-          className={`flex h-40 items-center justify-center ${
-            noticia.color === "sky"
-              ? "bg-sky-50 text-sky-700"
-              : "bg-slate-100 text-slate-700"
-          }`}
-        >
-          <div className="flex h-24 w-20 items-center justify-center rounded-xl border border-current/20 bg-white/70 shadow-sm transition-transform duration-300 group-hover:scale-105">
-            <IconoDocumento />
-          </div>
-        </div>
-
         <div className="flex flex-1 flex-col p-6">
           <p className="text-xs font-semibold uppercase tracking-widest text-sky-700">
             {noticia.fecha}
