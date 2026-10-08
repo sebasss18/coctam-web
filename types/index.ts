@@ -79,3 +79,40 @@ export interface Noticia {
   color: "sky" | "slate";
   contenido?: string[];
 }
+
+export type NombreIconoRecurso =
+  | "titulacion"
+  | "ifatca"
+  | "correo"
+  | "webmail"
+  | "organigrama";
+
+export interface EnlaceRecurso {
+  etiqueta: string;
+  href: string;
+  tipo: "descarga" | "externo";
+}
+
+export interface Recurso {
+  id: string;
+  titulo: string;
+  descripcion?: string;
+  icono: NombreIconoRecurso;
+  enlaces: EnlaceRecurso[];
+}
+
+export interface GrupoRecursos {
+  titulo: string;
+  recursos: Recurso[];
+}
+
+export interface Asamblea {
+  slug: string;
+  anio: number;
+  edicion: string;
+  sede: string;
+  codigo: string;
+  imagen: string;
+  lugar?: string;
+  fecha?: string;
+}
