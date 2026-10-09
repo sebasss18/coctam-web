@@ -1,6 +1,12 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import {
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -11,6 +17,8 @@ export default function Header() {
   const [abierto, setAbierto] = useState(false);
   const [scroll, setScroll] = useState(false);
   const [rutaPrevia, setRutaPrevia] = useState(ruta);
+  const [linea, setLinea] = useState({ left: 0, width: 0, visible: false });
+  const enlacesRef = useRef<Record<string, HTMLAnchorElement | null>>({});
 
   if (ruta !== rutaPrevia) {
     setRutaPrevia(ruta);
@@ -18,6 +26,30 @@ export default function Header() {
   }
 
   const cerrar = () => setAbierto(false);
+
+  const estaActivo = useCallback(
+    (href: string) => (href === "/" ? ruta === "/" : ruta.startsWith(href)),
+    [ruta],
+  );
+
+  useLayoutEffect(() => {
+    const medir = () => {
+      const activo = navegacion.find((item) => estaActivo(item.href));
+      const el = activo ? enlacesRef.current[activo.href] : null;
+      if (!el) {
+        setLinea((p) => ({ ...p, visible: false }));
+        return;
+      }
+      setLinea({
+        left: el.offsetLeft + 16,
+        width: el.offsetWidth - 32,
+        visible: true,
+      });
+    };
+    medir();
+    window.addEventListener("resize", medir);
+    return () => window.removeEventListener("resize", medir);
+  }, [ruta, estaActivo]);
 
   useEffect(() => {
     const alScroll = () => setScroll(window.scrollY > 8);
@@ -45,9 +77,6 @@ export default function Header() {
       window.removeEventListener("resize", alRedimensionar);
     };
   }, [abierto]);
-
-  const estaActivo = (href: string) =>
-    href === "/" ? ruta === "/" : ruta.startsWith(href);
 
   return (
     <>
@@ -100,15 +129,25 @@ export default function Header() {
             COCTAM
           </Link>
 
-          <ul className="hidden items-center gap-6 md:flex">
+          <ul className="relative hidden items-center md:flex">
+            <span
+              aria-hidden="true"
+              className={`pointer-events-none absolute bottom-1 h-0.5 rounded-full bg-sky-500 transition-all duration-500 ease-[cubic-bezier(0.65,0,0.35,1)] motion-reduce:transition-none ${
+                linea.visible ? "opacity-100" : "opacity-0"
+              }`}
+              style={{ left: linea.left, width: linea.width }}
+            />
             {navegacion.map((item) => {
               const activo = estaActivo(item.href);
               return (
                 <li key={item.href}>
                   <Link
                     href={item.href}
+                    ref={(el) => {
+                      enlacesRef.current[item.href] = el;
+                    }}
                     aria-current={activo ? "page" : undefined}
-                    className={`text-sm transition-colors duration-200 ${
+                    className={`block px-4 py-2 text-sm transition-colors duration-300 ${
                       activo ? "text-white" : "text-slate-400 hover:text-white"
                     }`}
                   >
