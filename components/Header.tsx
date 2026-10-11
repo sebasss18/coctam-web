@@ -111,12 +111,12 @@ export default function Header() {
               }`}
             >
               <Image
-                src="/logos/logo-coctam.jpeg"
+                src="/logos/coctam-logo.jpeg"
                 alt=""
                 width={96}
                 height={96}
                 priority
-                className="h-full w-full object-contain p-0.5 rounded-full"
+                className="rounded-full h-full w-full object-contain p-0.5"
               />
             </span>
             <span
