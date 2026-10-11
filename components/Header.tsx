@@ -111,7 +111,7 @@ export default function Header() {
               }`}
             >
               <Image
-                src="/logos/coctam-logo.jpeg"
+                src="/logos/IMG_5935.jpeg"
                 alt=""
                 width={96}
                 height={96}
