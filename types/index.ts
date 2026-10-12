@@ -116,3 +116,40 @@ export interface Asamblea {
   lugar?: string;
   fecha?: string;
 }
+
+export type NombreIconoAfiliacion =
+  | "profesional"
+  | "prevision"
+  | "local"
+  | "paqueteria"
+  | "correo";
+
+export interface GrupoBeneficios {
+  titulo: string;
+  icono: NombreIconoAfiliacion;
+  items: string[];
+}
+
+export interface Formato {
+  id: string;
+  titulo: string;
+  archivo: string;
+}
+
+export interface PasoEnvio {
+  titulo: string;
+  descripcion: string;
+  icono: NombreIconoAfiliacion;
+  enlaces?: { etiqueta: string; href: string }[];
+}
+
+export type NombreIconoContacto = "ubicacion" | "telefono" | "whatsapp";
+
+export interface DatoContacto {
+  id: string;
+  etiqueta: string;
+  valor: string;
+  href: string;
+  icono: NombreIconoContacto;
+  externo: boolean;
+}
