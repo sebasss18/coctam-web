@@ -104,14 +104,14 @@ export default function Header() {
             className="flex items-center text-lg font-bold tracking-widest"
           >
             <span
-              className={`block shrink-0 overflow-hidden rounded-xl bg-white shadow-md transition-all duration-500 ease-out motion-reduce:transition-none ${
+              className={`block shrink-0 overflow-hidden rounded-full bg-white shadow-md transition-all duration-500 ease-out motion-reduce:transition-none ${
                 scroll
                   ? "mr-0 h-0 w-0 scale-50 opacity-0"
                   : "mr-3 h-12 w-12 scale-100 opacity-100"
               }`}
             >
               <Image
-                src="/logos/coctam-logo.jpeg"
+                src="/logos/IMG_5935.jpeg"
                 alt=""
                 width={96}
                 height={96}
