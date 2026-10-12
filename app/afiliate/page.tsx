@@ -32,9 +32,13 @@ export default function Afiliate() {
         <Revelar className="origin-left">
           <TituloSeccion>Beneficios</TituloSeccion>
         </Revelar>
-        <div className="mt-6 grid gap-4 lg:grid-cols-2">
+        <div className="mt-6 grid grid-cols-1 gap-4 lg:grid-cols-2">
           {beneficios.map((grupo, i) => (
-            <Revelar key={grupo.titulo} retraso={i * 120} className="h-full">
+            <Revelar
+              key={grupo.titulo}
+              retraso={i * 120}
+              className="h-full min-w-0"
+            >
               <TarjetaBeneficios grupo={grupo} />
             </Revelar>
           ))}
@@ -45,9 +49,9 @@ export default function Afiliate() {
         <Revelar className="origin-left">
           <TituloSeccion>Requisitos</TituloSeccion>
         </Revelar>
-        <div className="mt-6 grid gap-4 lg:grid-cols-2">
-          <Revelar className="h-full">
-            <div className="h-full rounded-2xl border border-slate-200 bg-slate-50 p-6 sm:p-8">
+        <div className="mt-6 grid grid-cols-1 gap-4 lg:grid-cols-2">
+          <Revelar className="h-full min-w-0">
+            <div className="h-full rounded-2xl border border-slate-200 bg-slate-50 p-4 sm:p-8">
               <p className="text-xs font-medium uppercase tracking-widest text-slate-400">
                 Formatos a llenar
               </p>
@@ -59,8 +63,8 @@ export default function Afiliate() {
             </div>
           </Revelar>
 
-          <Revelar retraso={120} className="h-full">
-            <div className="h-full rounded-2xl border border-slate-200 bg-slate-50 p-6 sm:p-8">
+          <Revelar retraso={120} className="h-full min-w-0">
+            <div className="h-full rounded-2xl border border-slate-200 bg-slate-50 p-4 sm:p-8">
               <p className="text-xs font-medium uppercase tracking-widest text-slate-400">
                 Documentos a anexar
               </p>
@@ -95,9 +99,13 @@ export default function Afiliate() {
         <Revelar className="origin-left">
           <TituloSeccion>¿Cómo enviar tus documentos?</TituloSeccion>
         </Revelar>
-        <div className="mt-6 grid gap-4 md:grid-cols-3">
+        <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-3">
           {pasosEnvio.map((paso, i) => (
-            <Revelar key={paso.titulo} retraso={i * 120} className="h-full">
+            <Revelar
+              key={paso.titulo}
+              retraso={i * 120}
+              className="h-full min-w-0"
+            >
               <TarjetaPaso paso={paso} numero={i + 1} />
             </Revelar>
           ))}
@@ -106,7 +114,7 @@ export default function Afiliate() {
 
       <section className="mt-16">
         <Revelar>
-          <div className="flex flex-col gap-6 rounded-2xl border border-slate-200 bg-white p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8">
+          <div className="flex flex-col gap-6 rounded-2xl border border-slate-200 bg-white p-5 sm:flex-row sm:items-center sm:justify-between sm:p-8">
             <div>
               <p className="text-xs font-medium uppercase tracking-widest text-slate-400">
                 Medios de información

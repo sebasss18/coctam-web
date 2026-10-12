@@ -29,7 +29,7 @@ export default function TarjetaFormato({ formato }: { formato: Formato }) {
         </span>
 
         <div className="min-w-0 flex-1">
-          <p className="truncate text-sm font-medium text-slate-800">
+          <p className="text-sm font-medium leading-snug text-slate-800">
             {formato.titulo}
           </p>
           <p className="mt-0.5 text-xs text-slate-400">PDF</p>
