@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import EncabezadoPagina from "@/components/EncabezadoPagina";
-import Revelar from "@/components/Revelar";
-import NoticiasCard from "@/components/NoticiasCard";
+import EncabezadoPagina from "@/components/sections/EncabezadoPagina";
+import Revelar from "@/components/effects/Revelar";
+import NoticiasCard from "@/components/cards/NoticiasCard";
 import { noticias } from "@/data/noticias";
 
 export const metadata: Metadata = {

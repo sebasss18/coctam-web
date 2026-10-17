@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import EncabezadoPagina from "@/components/EncabezadoPagina";
-import Revelar from "@/components/Revelar";
-import TituloSeccion from "@/components/TituloSeccion";
-import TarjetaBeneficios from "@/components/TarjetaBeneficios";
-import TarjetaFormato from "@/components/TarjetaFormato";
-import TarjetaPaso from "@/components/TarjetaPaso";
+import EncabezadoPagina from "@/components/sections/EncabezadoPagina";
+import Revelar from "@/components/effects/Revelar";
+import TituloSeccion from "@/components/sections/TituloSeccion";
+import TarjetaBeneficios from "@/components/cards/TarjetaBeneficios";
+import TarjetaFormato from "@/components/cards/TarjetaFormato";
+import TarjetaPaso from "@/components/cards/TarjetaPaso";
 import {
   beneficios,
   documentosRequeridos,

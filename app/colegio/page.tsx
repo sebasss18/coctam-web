@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import EncabezadoPagina from "@/components/EncabezadoPagina";
-import TarjetaColegio from "@/components/TarjetaColegio";
-import Revelar from "@/components/Revelar";
+import EncabezadoPagina from "@/components/sections/EncabezadoPagina";
+import TarjetaColegio from "@/components/cards/TarjetaColegio";
+import Revelar from "@/components/effects/Revelar";
 import {
   historia,
   hitos,

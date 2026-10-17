@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Noticia } from "@/types";
-import Revelar from "@/components/Revelar";
+import Revelar from "@/components/effects/Revelar";
 
 interface NoticiasCardProps {
   noticia: Noticia;

@@ -1,8 +1,8 @@
 "use client";
 
 import type { ItemColegio } from "@/types";
-import IconoColegio from "@/components/IconoColegio";
-import CapaBrillo from "@/components/CapaBrillo";
+import IconoColegio from "@/components/icons/IconoColegio";
+import CapaBrillo from "@/components/effects/CapaBrillo";
 import { moverBrillo } from "@/lib/brillo";
 
 export default function TarjetaColegio({ item }: { item: ItemColegio }) {

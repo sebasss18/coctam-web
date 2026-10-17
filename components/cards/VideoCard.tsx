@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import type { Video } from "@/types";
-import Revelar from "@/components/Revelar";
-import CapaBrillo from "@/components/CapaBrillo";
+import Revelar from "@/components/effects/Revelar";
+import CapaBrillo from "@/components/effects/CapaBrillo";
 import { moverBrillo } from "@/lib/brillo";
 
 interface VideoCardProps {

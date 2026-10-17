@@ -23,10 +23,10 @@ export default async function Footer() {
         </div>
 
         <nav aria-label="Navegación del pie de página">
-          <h2 className="text-xs font-medium uppercase tracking-widest text-slate-500">
+          <h2 className="text-sm font-medium uppercase tracking-widest text-slate-500">
             Navegación
           </h2>
-          <ul className="mt-4 space-y-2 text-sm">
+          <ul className="mt-4 space-y-2 text-base">
             {navegacion.map((item) => (
               <li key={item.href}>
                 <Link
@@ -41,10 +41,10 @@ export default async function Footer() {
         </nav>
 
         <div>
-          <h2 className="text-xs font-medium uppercase tracking-widest text-slate-500">
+          <h2 className="text-sm font-medium uppercase tracking-widest text-slate-500">
             Síguenos
           </h2>
-          <ul className="mt-4 space-y-2 text-sm">
+          <ul className="mt-4 space-y-2 text-base">
             {redesSociales.map((red) => (
               <li key={red.href}>
                 <a

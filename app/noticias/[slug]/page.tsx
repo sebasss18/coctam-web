@@ -2,8 +2,8 @@ import { Suspense } from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import EncabezadoPagina from "@/components/EncabezadoPagina";
-import Revelar from "@/components/Revelar";
+import EncabezadoPagina from "@/components/sections/EncabezadoPagina";
+import Revelar from "@/components/effects/Revelar";
 import { noticias } from "@/data/noticias";
 
 interface NoticiaProps {

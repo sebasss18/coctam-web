@@ -1,8 +1,8 @@
 "use client";
 
 import type { Recurso } from "@/types";
-import IconoRecurso from "@/components/IconoRecurso";
-import CapaBrillo from "@/components/CapaBrillo";
+import IconoRecurso from "@/components/icons/IconoRecurso";
+import CapaBrillo from "@/components/effects/CapaBrillo";
 import { moverBrillo } from "@/lib/brillo";
 
 export default function TarjetaRecurso({ recurso }: { recurso: Recurso }) {

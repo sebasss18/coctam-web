@@ -1,5 +1,5 @@
 import type { PasoEnvio } from "@/types";
-import IconoAfiliacion from "@/components/IconoAfiliacion";
+import IconoAfiliacion from "@/components/icons/IconoAfiliacion";
 
 export default function TarjetaPaso({
   paso,

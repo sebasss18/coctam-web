@@ -2,11 +2,11 @@ import Link from "next/link";
 import { accesos } from "@/data/enlaces";
 import { convenios } from "@/data/convenios";
 import { videoInstitucional } from "@/data/video";
-import TarjetaAcceso from "@/components/TarjetaAcceso";
-import ConvenioCard from "@/components/ConvenioCard";
-import VideoCard from "@/components/VideoCard";
-import HeroCarrusel from "@/components/HeroCarrusel";
-import Revelar from "@/components/Revelar";
+import TarjetaAcceso from "@/components/cards/TarjetaAcceso";
+import ConvenioCard from "@/components/cards/ConvenioCard";
+import VideoCard from "@/components/cards/VideoCard";
+import HeroCarrusel from "@/components/hero/HeroCarrusel";
+import Revelar from "@/components/effects/Revelar";
 
 export default function Home() {
   return (

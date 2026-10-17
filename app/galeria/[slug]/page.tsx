@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import EncabezadoPagina from "@/components/EncabezadoPagina";
-import Revelar from "@/components/Revelar";
+import EncabezadoPagina from "@/components/sections/EncabezadoPagina";
+import Revelar from "@/components/effects/Revelar";
 import { asambleas, tituloAsamblea } from "@/data/galeria";
 import type { Asamblea } from "@/types";
 

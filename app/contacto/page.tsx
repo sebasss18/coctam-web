@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import EncabezadoPagina from "@/components/EncabezadoPagina";
-import Revelar from "@/components/Revelar";
-import TarjetaContacto from "@/components/TarjetaContacto";
-import TituloSeccion from "@/components/TituloSeccion";
+import EncabezadoPagina from "@/components/sections/EncabezadoPagina";
+import Revelar from "@/components/effects/Revelar";
+import TarjetaContacto from "@/components/cards/TarjetaContacto";
+import TituloSeccion from "@/components/sections/TituloSeccion";
 import { datosContacto, mapaEmbed, mapaEnlace } from "@/data/contacto";
 
 export const metadata: Metadata = {

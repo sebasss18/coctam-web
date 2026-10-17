@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import EncabezadoPagina from "@/components/EncabezadoPagina";
-import Revelar from "@/components/Revelar";
-import TarjetaAsamblea from "@/components/TarjetaAsamblea";
+import EncabezadoPagina from "@/components/sections/EncabezadoPagina";
+import Revelar from "@/components/effects/Revelar";
+import TarjetaAsamblea from "@/components/cards/TarjetaAsamblea";
 import { asambleas } from "@/data/galeria";
 
 export const metadata: Metadata = {

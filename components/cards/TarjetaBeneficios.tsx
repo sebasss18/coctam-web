@@ -1,8 +1,8 @@
 "use client";
 
 import type { GrupoBeneficios } from "@/types";
-import IconoAfiliacion from "@/components/IconoAfiliacion";
-import CapaBrillo from "@/components/CapaBrillo";
+import IconoAfiliacion from "@/components/icons/IconoAfiliacion";
+import CapaBrillo from "@/components/effects/CapaBrillo";
 import { moverBrillo } from "@/lib/brillo";
 
 export default function TarjetaBeneficios({

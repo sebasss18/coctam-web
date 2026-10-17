@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import type { Acceso } from "@/types";
-import IconoAcceso from "@/components/IconoAcceso";
-import CapaBrillo from "@/components/CapaBrillo";
+import IconoAcceso from "@/components/icons/IconoAcceso";
+import CapaBrillo from "@/components/effects/CapaBrillo";
 import { moverBrillo } from "@/lib/brillo";
 
 export default function TarjetaAcceso({ acceso }: { acceso: Acceso }) {
